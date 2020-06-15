@@ -1,0 +1,251 @@
+<!-- This file contains many elements adapted from the online tutoral -->
+<!-- on Bootstrap 4 as found here: https://www.w3schools.com/bootstrap4/default.asp -->
+
+<!--
+Images source:
+https://m.media-amazon.com/images/M/MV5BMWY2YWU0NmMtNmQ3Yy00YmQyLTkxZWQtN2I4YmU0MjNjMWI4XkEyXkFqcGdeQXVyNjQ4ODE4MzQ@._V1_.jpg
+https://www.moneymakers.com/wp-content/uploads/2018/11/vanilla-ice.jpg
+https://m.media-amazon.com/images/M/MV5BMWY2YWU0NmMtNmQ3Yy00YmQyLTkxZWQtN2I4YmU0MjNjMWI4XkEyXkFqcGdeQXVyNjQ4ODE4MzQ@._V1_.jpg
+https://us.anteagroup.com/sites/default/files/styles/width1520/public/ag05784.jpg?itok=I3g2Y3XE
+https://www.spinlister.com/blog/wp-content/uploads/2017/01/best-bike-shop-5.jpg
+https://i.ytimg.com/vi/CHaTWk6uqd8/maxresdefault.jpg
+https://static.thenounproject.com/png/5432-200.png
+https://image.flaticon.com/icons/svg/75/75668.svg
+https://image.flaticon.com/icons/svg/3/3729.svg
+https://cdn.onlinewebfonts.com/svg/img_293201.png
+https://www.netclipart.com/pp/m/274-2742499_business-card-icon-png.png
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- The head should contain an appropriate title for your site -->
+<head>
+    <!-- Style sheet (CSS) and JavaScript scripts necessary to use Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>    
+
+    <!-- Your own additional style sheet -->
+    <link href="styles/style.css" rel="stylesheet" type="text/css">
+</head>
+<title>COOL BIKEZ</title>
+
+<body>
+
+    <div class="container">
+        <div class="container-md p-3 my-3 border bg-success text-white">
+            	<h1>COOL BIKEZ</h1>
+            	<h2>Bicycle sale and repair!</h2>
+		<p>10364 Trianon Place<br>Wellington, FL 33449 US</p>
+        </div>
+	<div class="container">
+	        <a href="#mechanics" class="btn btn-warning btn-block" data-toggle="collapse"><h5><img src="images/expert.png" alt="logo" style="width:30px;"> Meet our experts!</h5></a>
+	        <div id="mechanics" class="collapse">
+	            <div class="card bg-success" style="width:200px">
+	                <img class="card-img-top" src="images/Robert.jpg" alt="Card image" style="width:100%">
+	                <div class="card-body">
+	                    <h4 class="card-title">Robert</h4>
+	                    <p class="card-text">Robert is our sales team leader of award-winning customer service. Him and his fellow salesmen Matthew and Vanilla can easily match your customer needs and sell your the bike meant just for you.</p>
+	                </div>
+	            </div>
+                    <div class="card bg-success" style="width:200px">
+	                <img class="card-img-top" src="images/Van.jpg" alt="Card image" style="width:100%">
+	                <div class="card-body">
+	                    <h4 class="card-title">Van</h4>
+	                    <p class="card-text">Van is our lead engineer. He knows all bikes inside-and-out and his team, including Bobby and Ice, can definitely get the best performance out of your machine.</p>
+	                </div>
+	            </div>
+		    <div class="card bg-success" style="width:200px">
+	                <img class="card-img-top" src="images/Winkle.jpg" alt="Card image" style="width:100%">
+	                <div class="card-body">
+	                    <h4 class="card-title">Winkle</h4>
+	                    <p class="card-text">Winkle is our in-house bike historian. He can tell you about the historical significance of any of the luxury brands we carry in our store.</p>
+	                </div>
+	            </div>
+	        </div><br>
+	</div>
+	<h3>Book an appointment!</h3>
+<nav class="navbar navbar-expand-md bg-success navbar-dark">
+  <a class="navbar-brand" href="#">Navigation</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="collapsibleNavbar">
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" href="#service"><img src="images/service.png" alt="logo" style="width:30px;"> Choose a service</a>
+      </li> 
+      <li class="nav-item">
+        <a class="nav-link" href="#staff"><img src="images/staff.png" alt="logo" style="width:30px;"> Choose your preferred staff</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#appointment"><img src="images/appointment.png" alt="logo" style="width:30px;"> Choose an appointment time</a>
+      </li>
+	<li class="nav-item">
+        <a class="nav-link" href="#info"><img src="images/info.png" alt="logo" style="width:30px;"> Provide your info</a>
+      </li>
+
+   </ul>
+  </div>  
+</nav>
+<br>
+	<form name="myForm" onsubmit="return validateForm()" method="post">
+	<div class="container" id="service">
+                <h4><img src="images/service2.png" alt="logo" style="width:30px;"> Choose a service</h4>
+			<p>Please specify which of our services you require.</p>
+			<label>
+				<input type="radio" name="service" value="consultation">
+  				<img src="images/Consultation.png">
+			</label>
+			<label>
+		  		<input type="radio" name="service" value="purchase">
+  				<img src="images/Purchase.png">
+			</label>
+			<label>
+		  		<input type="radio" name="service" value="repair">
+  				<img src="images/Repair.png">
+			</label><br>
+			<w id="serviceError"></w>
+	</div>
+	<div class="container" id="staff">
+                <h4><img src="images/staff2.png" alt="logo" style="width:30px;"> Choose your preferred staff</h4>
+			<p>If you have a preference for who serves you, please let us know. This will update appointment availability in the calendar below. Unless specified, staff are available Mondays through Fridays.</p>
+			<p>Which salesperson do you prefer?
+				<select id="salesperson" name="salesperson">
+					<option value="none">(no preference)</option>
+  					<option value="matthew">Matthew (unavailable Mon)</option>
+  					<option value="robert">⭐Robert</option>
+  					<option value="vanilla">Vanilla (unavailable Tue)</option>
+				</select>
+			</p>
+			<p>Which engineer do you prefer?
+				<select id="engineer" name="engineer">
+					<option value="none">(no preference)</option>
+  					<option value="bobby">Bobby (unavailable Wed)</option>
+  					<option value="ice">Ice (unavailable Thu)</option>
+  					<option value="van">⭐Van</option>
+				</select>
+			</p>
+			<p>Do you require our in-house bike historian ⭐Winkle (unavailable Fri)? 
+				<input type="checkbox" id="historian" name="historian" value="Historian">Yes!
+			</p>
+	</div>
+	<div class="container" id="appointment">
+                <h4><img src="images/appointment2.png" alt="logo" style="width:30px;"> Choose an appointment time</h4>
+		<p>Please specify when you would like your appointment. We're open Mon-Fri.</p>
+                <!-- Bootstrap has various input components. Some examples are given here: -->
+                <!-- Component shown here: https://v4-alpha.getbootstrap.com/components/forms/#textual-inputs -->
+		<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  		<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  		<script>
+		$( function() {
+    			$( "#datepicker" ).datepicker({
+            			beforeShowDay: function(date) {
+        				var day = date.getDay();
+					var daysOff = (day != 0) && (day != 6);
+					if(document.getElementById("salesperson").value == "matthew"){
+						daysOff = daysOff && (day != 1);
+					}
+					if(document.getElementById("salesperson").value == "vanilla"){
+						daysOff = daysOff && (day != 2);
+					}
+					if(document.getElementById("engineer").value == "bobby"){
+						daysOff = daysOff && (day != 3);
+						}
+					if(document.getElementById("engineer").value == "ice"){
+						daysOff = daysOff && (day != 4);
+					}
+					if(document.getElementById("historian").checked == true){
+						daysOff = daysOff && (day != 5);
+					}
+					return [daysOff];
+    				}
+        		});
+  		} );
+  		</script>			
+		<p>Date: <input type="text" id="datepicker"> Time: <input type="time" id="time" name="time"><w id="dateError"><w></p>
+	</div>
+	<div class="container" id="info">
+                <h4><img src="images/info2.png" alt="logo" style="width:30px;"> Provide your info</h4>
+			<p>Please leave us with your personal information.</p>
+			Full name: <input type="text" id="fname" name="fname" placeholder="First name" title="If credit card info provided below, must match name on card. (eg: Vanilla)"><input type="text" id="lname" name="lname" placeholder="Last name" title="If credit card info provided below, name must match on card. (eg: Iceman)"><w id="nameError"></w><br>
+                        Phone number: <input type="tel" id="phone" name="phone" placeholder="XXXXXXXXXX" title="Only numbers accepted. (eg: 5417543010)"><w id="phoneError"></w><br>	
+			Email address: <input type="text" id="email" name="email" placeholder="username@domain.com" title="(eg: vanilla.ice@email.com)"><w id="emailError"></w><br><br>
+			<p>Please provide your credit card information to guarantee your service appointment.</p>
+			Credit card number: <input type="text" id="cardNumber" name="cardNumber" placeholder="XXXXXXXXXXXXXXXX" title="Name on card must match full name provided above. A $25 charge applies for missed appointments. (eg: 1234567890123456)"><w id="cardError"></w><br>
+			Expiry date: <input type="text" id="expiry" name="expiry" placeholder="MMYY" title="Located beneath the credit card number. (eg: 05/20)"><w id="expiryError"></w><br>
+			CVV: <input type="text" id="cvv" name="cvv" placeholder="XXX" title="Located on the back of the credit card. (eg: 123)"><w id="cvvError"></w><br><br>
+			<button type="button" class="btn btn-success" onclick="validateForm()">Book appointment</button><br>
+	</div>
+	</form><br><br><br>
+	<div class="footer">
+  		<p>Website designed by Hansel-Timon Ngien</p>
+	</div>
+</body>
+</html>
+
+<script>
+function validateForm() {
+	//validate choice of service
+	if ($('input[name=service]:checked').length != 1) {
+    		document.getElementById("serviceError").innerHTML = "*PLEASE SELECT A SERVICE";
+	}else{
+		document.getElementById("serviceError").innerHTML = "";
+  	}
+	//validate choice of appointment
+	if($("#datepicker").val() == "" || $("#time").val() == ""){
+		document.getElementById("dateError").innerHTML = "*PLEASE SELECT A DATE AND TIME";
+	}else{
+		document.getElementById("dateError").innerHTML = "";
+  	}
+	//validate name
+	var fname = document.forms["myForm"]["fname"].value;
+	var lname = document.forms["myForm"]["lname"].value;
+  	if(fname == "" || lname == "") {
+    		document.getElementById("nameError").innerHTML = "*PLEASE FILL IN YOUR FULL NAME";
+  	}else{
+		document.getElementById("nameError").innerHTML = "";
+  	}
+	//validate phone number
+	var phone = document.forms["myForm"]["phone"].value;
+	var phoneFormat = /^\d{10}$/;
+	if(!(phone.match(phoneFormat))){
+		document.getElementById("phoneError").innerHTML = "*PLEASE ENTER YOUR 10-DIGIT PHONE NUMBER AS NUMBERS ONLY";
+	}else{
+		document.getElementById("phoneError").innerHTML = "";
+	}
+	//validate email address
+	var email = document.forms["myForm"]["email"].value.toLowerCase();
+	var emailFormat = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+	if(!(email.match(emailFormat))){
+		document.getElementById("emailError").innerHTML = "*PLEASE ENTER A VALID EMAIL ADDRESS";
+	}else{
+		document.getElementById("emailError").innerHTML = "";
+	}
+	//validate credit card number
+	var cardNumber = document.forms["myForm"]["cardNumber"].value;
+	var cardFormat = /^\d{16}$/;
+	if(!(cardNumber.match(cardFormat))){
+		document.getElementById("cardError").innerHTML = "*PLEASE ENTER YOUR 16-DIGIT CREDIT CARD NUMBER AS NUMBERS ONLY";
+	}else{
+		document.getElementById("cardError").innerHTML = "";
+	}
+	//validate credit card expiry date
+	var expiry = document.forms["myForm"]["expiry"].value;
+	var expiryFormat = /^\d{4}$/;
+	if(!(expiry.match(expiryFormat))){
+		document.getElementById("expiryError").innerHTML = "*PLEASE ENTER THE MONTH AND YEAR OF EXPIRY AS 4 DIGITS ONLY";
+	}else{
+		document.getElementById("expiryError").innerHTML = "";
+	}
+	//validate CVV
+	var cvv = document.forms["myForm"]["cvv"].value;
+	var cvvFormat = /^\d{3}$/;
+	if(!(cvv.match(cvvFormat))){
+		document.getElementById("cvvError").innerHTML = "*PLEASE ENTER THE 3-DIGIT SECURITY CODE ON THE BACK OF YOUR CREDIT CARD AS NUMBERS ONLY";
+	}else{
+		document.getElementById("cvvError").innerHTML = "";
+	}
+}
+</script>
