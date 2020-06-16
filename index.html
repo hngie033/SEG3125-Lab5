@@ -169,14 +169,15 @@ https://www.netclipart.com/pp/m/274-2742499_business-card-icon-png.png
 	<div class="container" id="info">
                 <h4><img src="images/info2.png" alt="logo" style="width:30px;"> Provide your info</h4>
 			<p>Please leave us with your personal information.</p>
-			Full name: <input type="text" id="fname" name="fname" placeholder="First name" title="If credit card info provided below, must match name on card. (eg: Vanilla)"><input type="text" id="lname" name="lname" placeholder="Last name" title="If credit card info provided below, name must match on card. (eg: Iceman)"><w id="nameError"></w><br>
+			Full name: <input type="text" id="fname" name="fname" placeholder="First name" title="If credit card info provided below, must match name on card."><input type="text" id="lname" name="lname" placeholder="Last name" title="If credit card info provided below, name must match on card."><w id="nameError"></w><br>
                         Phone number: <input type="tel" id="phone" name="phone" placeholder="XXXXXXXXXX" title="Only numbers accepted. (eg: 5417543010)"><w id="phoneError"></w><br>	
 			Email address: <input type="text" id="email" name="email" placeholder="username@domain.com" title="(eg: vanilla.ice@email.com)"><w id="emailError"></w><br><br>
 			<p>Please provide your credit card information to guarantee your service appointment.</p>
-			Credit card number: <input type="text" id="cardNumber" name="cardNumber" placeholder="XXXXXXXXXXXXXXXX" title="Name on card must match full name provided above. A $25 charge applies for missed appointments. (eg: 1234567890123456)"><w id="cardError"></w><br>
-			Expiry date: <input type="text" id="expiry" name="expiry" placeholder="MMYY" title="Located beneath the credit card number. (eg: 05/20)"><w id="expiryError"></w><br>
-			CVV: <input type="text" id="cvv" name="cvv" placeholder="XXX" title="Located on the back of the credit card. (eg: 123)"><w id="cvvError"></w><br><br>
-			<button type="button" class="btn btn-success" onclick="validateForm()">Book appointment</button><br>
+			Credit card number: <input type="text" id="cardNumber" name="cardNumber" placeholder="XXXXXXXXXXXXXXXX" title="Name on card must match full name provided above. A $25 charge applies for missed appointments. Only numbers accepted.(eg: 1234567890123456)"><w id="cardError"></w><br>
+			Expiry date: <input type="text" id="expiry" name="expiry" placeholder="MMYY" title="Located beneath the credit card number. Only numbers accepted. (eg: 0520)"><w id="expiryError"></w><br>
+			CVV: <input type="text" id="cvv" name="cvv" placeholder="XXX" title="Located on the back of the credit card. Only numbers accepted. (eg: 123)"><w id="cvvError"></w><br><br>
+			<button type="button" class="btn btn-success" onclick="validateForm()">Book appointment</button><br><br>
+			<p id="submitted" style="background:#ffcc00"><p>
 	</div>
 	</form><br><br><br>
 	<div class="footer">
@@ -246,6 +247,11 @@ function validateForm() {
 		document.getElementById("cvvError").innerHTML = "*PLEASE ENTER THE 3-DIGIT SECURITY CODE ON THE BACK OF YOUR CREDIT CARD AS NUMBERS ONLY";
 	}else{
 		document.getElementById("cvvError").innerHTML = "";
+	}
+	if($('input[name=service]:checked').length >= 1 && $("#datepicker").val() != "" && $("#time").val() != "" && fname != "" && lname != "" && phone.match(phoneFormat) && email.match(emailFormat) && cardNumber.match(cardFormat) && expiry.match(expiryFormat) && cvv.match(cvvFormat)){
+		document.getElementById("submitted").innerHTML = "Appointment submitted!";
+	}else{
+		document.getElementById("submitted").innerHTML = "";
 	}
 }
 </script>
